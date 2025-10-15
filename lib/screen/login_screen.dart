@@ -91,7 +91,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 const SizedBox(height: 16),
                 const Text(
-                  'SmartSaving',
+                  'Saving',
                   style: TextStyle(
                     fontSize: 32,
                     fontWeight: FontWeight.bold,
@@ -173,7 +173,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 OutlinedButton.icon(
                   onPressed: _isLoading ? null : _signInWithGoogle,
                   icon: Image.asset(
-                    'assets/google_logo.png',
+                    'assets/google_logo.jpg',
                     height: 20,
                     errorBuilder: (context, error, stackTrace) => const Icon(Icons.g_mobiledata),
                   ),
@@ -208,4 +208,5 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 }
+
 

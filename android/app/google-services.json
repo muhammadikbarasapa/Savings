@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "369528197991",
+    "project_id": "aplikasi-savings",
+    "storage_bucket": "aplikasi-savings.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:369528197991:android:3399b36f10b23ea32dd5c2",
+        "android_client_info": {
+          "package_name": "com.example.savings_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGA64rFeYJFT37kDqOSQXOhIudemZekb8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:369528197991:android:cb63c03b420e4a572dd5c2",
+        "android_client_info": {
+          "package_name": "om.example.Savings"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGA64rFeYJFT37kDqOSQXOhIudemZekb8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

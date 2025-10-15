@@ -1,0 +1,25 @@
+{
+    "flutter": {
+        "platforms": {
+            "android": {
+                "default": {
+                    "projectId": "aplikasi-savings",
+                    "appId": "1:369528197991:android:3399b36f10b23ea32dd5c2",
+                    "fileOutput": "android/app/google-services.json"
+                }
+            },
+            "dart": {
+                "lib/firebase_options.dart": {
+                    "projectId": "aplikasi-savings",
+                    "configurations": {
+                        "android": "1:369528197991:android:3399b36f10b23ea32dd5c2",
+                        "ios": "1:369528197991:ios:2ff94d1ec971f4172dd5c2",
+                        "macos": "1:369528197991:ios:2ff94d1ec971f4172dd5c2",
+                        "web": "1:369528197991:web:6c50c3f7ab4ca1a12dd5c2",
+                        "windows": "1:369528197991:web:bb2d64211f9f57062dd5c2"
+                    }
+                }
+            }
+        }
+    }
+}

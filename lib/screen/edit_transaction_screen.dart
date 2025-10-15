@@ -97,8 +97,8 @@ class _EditTransactionScreenState extends State<EditTransactionScreen> {
 
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: const Text('Transaksi berhasil diperbarui!'),
+          const SnackBar(
+            content: Text('Transaksi berhasil diperbarui!'),
             backgroundColor: Colors.green,
           ),
         );

@@ -27,10 +27,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.macOS:
         return macos;
       case TargetPlatform.windows:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for windows - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return windows;
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -43,38 +40,50 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'your-web-api-key',
-    appId: 'your-web-app-id',
-    messagingSenderId: 'your-messaging-sender-id',
-    projectId: 'your-project-id',
-    authDomain: 'your-project-id.firebaseapp.com',
-    storageBucket: 'your-project-id.appspot.com',
-  );
+ static FirebaseOptions get web => const FirebaseOptions(
+  apiKey: 'API_KEY',
+  authDomain: 'PROJECT_ID.firebaseapp.com',
+  projectId: 'PROJECT_ID',
+  storageBucket: 'PROJECT_ID.appspot.com',
+  messagingSenderId: 'SENDER_ID',
+  appId: 'APP_ID',
+);
+
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'your-android-api-key',
-    appId: 'your-android-app-id',
-    messagingSenderId: 'your-messaging-sender-id',
-    projectId: 'your-project-id',
-    storageBucket: 'your-project-id.appspot.com',
+    apiKey: 'AIzaSyAGA64rFeYJFT37kDqOSQXOhIudemZekb8',
+    appId: '1:369528197991:android:3399b36f10b23ea32dd5c2',
+    messagingSenderId: '369528197991',
+    projectId: 'aplikasi-savings',
+    storageBucket: 'aplikasi-savings.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'your-ios-api-key',
-    appId: 'your-ios-app-id',
-    messagingSenderId: 'your-messaging-sender-id',
-    projectId: 'your-project-id',
-    storageBucket: 'your-project-id.appspot.com',
+    apiKey: 'AIzaSyBoeJPd2lX-L5TXMDNpMRvV8ifvoI5TTjY',
+    appId: '1:369528197991:ios:2ff94d1ec971f4172dd5c2',
+    messagingSenderId: '369528197991',
+    projectId: 'aplikasi-savings',
+    storageBucket: 'aplikasi-savings.firebasestorage.app',
     iosBundleId: 'com.example.savingsApp',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'your-macos-api-key',
-    appId: 'your-macos-app-id',
-    messagingSenderId: 'your-messaging-sender-id',
-    projectId: 'your-project-id',
-    storageBucket: 'your-project-id.appspot.com',
+    apiKey: 'AIzaSyBoeJPd2lX-L5TXMDNpMRvV8ifvoI5TTjY',
+    appId: '1:369528197991:ios:2ff94d1ec971f4172dd5c2',
+    messagingSenderId: '369528197991',
+    projectId: 'aplikasi-savings',
+    storageBucket: 'aplikasi-savings.firebasestorage.app',
     iosBundleId: 'com.example.savingsApp',
   );
+
+  static const FirebaseOptions windows = FirebaseOptions(
+    apiKey: 'AIzaSyCGnOObirPuWQbLnBbz-9mEDZz7vgVgfg8',
+    appId: '1:369528197991:web:bb2d64211f9f57062dd5c2',
+    messagingSenderId: '369528197991',
+    projectId: 'aplikasi-savings',
+    authDomain: 'aplikasi-savings.firebaseapp.com',
+    storageBucket: 'aplikasi-savings.firebasestorage.app',
+    measurementId: 'G-SZTK0SZ8XZ',
+  );
+
 }

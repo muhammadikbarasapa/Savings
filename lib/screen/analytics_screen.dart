@@ -457,7 +457,7 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> with TickerProviderSt
           ),
           const SizedBox(height: 16),
           
-          ...insights.map((insight) => _buildInsightCard(insight)).toList(),
+          ...insights.map((insight) => _buildInsightCard(insight)),
         ],
       ),
     );

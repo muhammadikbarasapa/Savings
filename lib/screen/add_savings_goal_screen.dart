@@ -330,7 +330,7 @@ class _AddSavingsGoalScreenState extends State<AddSavingsGoalScreen> {
           LinearProgressIndicator(
             value: progress / 100,
             backgroundColor: Colors.grey.shade200,
-            valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
+            valueColor: const AlwaysStoppedAnimation<Color>(Colors.blue),
             minHeight: 8,
           ),
           const SizedBox(height: 8),
@@ -357,7 +357,7 @@ class _AddSavingsGoalScreenState extends State<AddSavingsGoalScreen> {
                 ),
               ),
               Text(
-                '${daysRemaining} hari lagi',
+                '$daysRemaining hari lagi',
                 style: const TextStyle(
                   fontSize: 12,
                   color: Colors.grey,

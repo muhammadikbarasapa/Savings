@@ -153,10 +153,10 @@ class ChartScreen extends StatelessWidget {
           color: Colors.black87,
         ),
       ),
-      legend: Legend(
+      legend: const Legend(
         isVisible: true,
         position: LegendPosition.bottom,
-        textStyle: const TextStyle(
+        textStyle: TextStyle(
           fontSize: 12,
           fontWeight: FontWeight.w500,
         ),
@@ -170,9 +170,9 @@ class ChartScreen extends StatelessWidget {
           pointColorMapper: (ChartData data, _) => data.color,
           dataLabelMapper: (ChartData data, _) =>
               '${data.category}\n${Formatter.formatCurrency(data.amount)}',
-          dataLabelSettings: DataLabelSettings(
+          dataLabelSettings: const DataLabelSettings(
             isVisible: true,
-            textStyle: const TextStyle(
+            textStyle: TextStyle(
               fontSize: 10,
               fontWeight: FontWeight.w600,
             ),
@@ -282,10 +282,10 @@ class ChartScreen extends StatelessWidget {
           color: Colors.black87,
         ),
       ),
-      legend: Legend(
+      legend: const Legend(
         isVisible: true,
         position: LegendPosition.bottom,
-        textStyle: const TextStyle(
+        textStyle: TextStyle(
           fontSize: 12,
           fontWeight: FontWeight.w500,
         ),
@@ -308,9 +308,9 @@ class ChartScreen extends StatelessWidget {
           animationDuration: 1000,
           animationDelay: 0,
           enableTooltip: true,
-          dataLabelSettings: DataLabelSettings(
+          dataLabelSettings: const DataLabelSettings(
             isVisible: false,
-            textStyle: const TextStyle(
+            textStyle: TextStyle(
               fontSize: 10,
               fontWeight: FontWeight.w600,
             ),
@@ -326,9 +326,9 @@ class ChartScreen extends StatelessWidget {
           animationDuration: 1000,
           animationDelay: 200,
           enableTooltip: true,
-          dataLabelSettings: DataLabelSettings(
+          dataLabelSettings: const DataLabelSettings(
             isVisible: false,
-            textStyle: const TextStyle(
+            textStyle: TextStyle(
               fontSize: 10,
               fontWeight: FontWeight.w600,
             ),
@@ -352,9 +352,9 @@ class ChartScreen extends StatelessWidget {
             height: 8,
             width: 8,
           ),
-          dataLabelSettings: DataLabelSettings(
+          dataLabelSettings: const DataLabelSettings(
             isVisible: true,
-            textStyle: const TextStyle(
+            textStyle: TextStyle(
               fontSize: 10,
               fontWeight: FontWeight.w600,
               color: Colors.blue,
