@@ -40,15 +40,15 @@ class DefaultFirebaseOptions {
     }
   }
 
- static FirebaseOptions get web => const FirebaseOptions(
-  apiKey: 'API_KEY',
-  authDomain: 'PROJECT_ID.firebaseapp.com',
-  projectId: 'PROJECT_ID',
-  storageBucket: 'PROJECT_ID.appspot.com',
-  messagingSenderId: 'SENDER_ID',
-  appId: 'APP_ID',
-);
-
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyCGnOObirPuWQbLnBbz-9mEDZz7vgVgfg8',
+    appId: '1:369528197991:web:6c50c3f7ab4ca1a12dd5c2',
+    messagingSenderId: '369528197991',
+    projectId: 'aplikasi-savings',
+    authDomain: 'aplikasi-savings.firebaseapp.com',
+    storageBucket: 'aplikasi-savings.firebasestorage.app',
+    measurementId: 'G-1LVERCVYWJ',
+  );
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyAGA64rFeYJFT37kDqOSQXOhIudemZekb8',

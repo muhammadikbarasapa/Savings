@@ -1,17 +1,16 @@
 plugins {
     id("com.android.application")
     // START: FlutterFire Configuration
-   'com.google.gms.google-services'
     // END: FlutterFire Configuration
     id "kotlin-android"
     id "dev.flutter.flutter-gradle-plugin"
-    id("com.google.gms.google-services") version "4.4.4" apply false
+    id("com.google.gms.google-services") version "4.3.15" apply false
 }
 
 android {
     namespace 'com.example.savings_app'
-    compileSdk flutter.compileSdkVersion
-    ndkVersion flutter.ndkVersion
+    compileSdk = 34
+
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -22,12 +21,12 @@ android {
         jvmTarget = '1.8'
     }
 
-    defaultConfig {
-        applicationId "com.gmail.savings_app"
-        minSdkVersion flutter.minSdkVersion
-        targetSdkVersion flutter.targetSdkVersion
-        versionCode flutter.versionCode
-        versionName flutter.versionName
+      defaultConfig {
+        applicationId "com.example.savings_app" // ganti sesuai nama package kamu
+        minSdk 33       // ✅ versi minimum Android (API Level 21 = Android 5.0)
+        targetSdk 35      // versi target Android
+        versionCode 1
+        versionName "1.0"
     }
 
     buildTypes {
@@ -36,7 +35,6 @@ android {
         }
     }
    dependencies {
-    classpath 'com.google.gms:google-services:4.3.15'
     implementation 'com.google.firebase:firebase-auth'
     implementation 'com.google.firebase:firebase-firestore'
     implementation("com.google.firebase:firebase-analytics")

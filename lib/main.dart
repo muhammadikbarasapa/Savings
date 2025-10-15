@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'firebase_options.dart';
+// ignore: unused_import
 import 'package:cloud_firestore/cloud_firestore.dart';
 // import 'package:timezone/data/latest.dart' as tz; // Comment sementara untuk Web
 // import 'services/notification_service.dart'; // Comment sementara untuk Web
@@ -82,50 +83,10 @@ class MyApp extends StatelessWidget {
 }
 
 // =====================================================
-// ✅ HomeScreen: Upload ke Firestore
+// ✅ HomeScreen: Displays user's email
 // =====================================================
-class HomeScreen extends StatefulWidget {
+class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
-
-  @override
-  State<HomeScreen> createState() => _HomeScreenState();
-}
-
-class _HomeScreenState extends State<HomeScreen> {
-  final TextEditingController nameController = TextEditingController();
-  final TextEditingController emailController = TextEditingController();
-
-  Future<void> uploadData() async {
-    final name = nameController.text.trim();
-    final email = emailController.text.trim();
-
-    if (name.isEmpty || email.isEmpty) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('❌ Nama dan Email tidak boleh kosong')),
-      );
-      return;
-    }
-
-    try {
-      FirebaseFirestore.instance.collection('users').add({
-        'name': 'Ikbar',
-        'email': 'ikbar@example.com',
-        'password': 'ikbar123', 
-        'createdAt': DateTime.now(),
-      });
-      // ignore: use_build_context_synchronously
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('✅ Data berhasil diupload!')),
-      );
-      nameController.clear();
-      emailController.clear();
-    } catch (e) {
-      // ignore: use_build_context_synchronously
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('❌ Gagal upload: $e')),
-      );
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -133,34 +94,15 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home - Upload Data'),
+        title: const Text('Home'),
         backgroundColor: Colors.blue,
       ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16),
+      body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Selamat datang, ${user?.email ?? "User"}!'),
-            const SizedBox(height: 20),
-            TextField(
-              controller: nameController,
-              decoration: const InputDecoration(
-                labelText: 'Nama',
-                border: OutlineInputBorder(),
-              ),
-            ),
-            const SizedBox(height: 12),
-            TextField(
-              controller: emailController,
-              decoration: const InputDecoration(
-                labelText: 'Email',
-                border: OutlineInputBorder(),
-              ),
-            ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: uploadData,
-              child: const Text('Upload ke Firestore'),
+            Text('Selamat datang, ${user?.email ?? "User"}!',
+              style: const TextStyle(fontSize: 20),
             ),
           ],
         ),

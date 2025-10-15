@@ -1,3 +1,20 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        // Plugin Android untuk Gradle
+        classpath 'com.android.tools.build:gradle:8.5.0'
+
+        // Plugin Google Services untuk Firebase
+        classpath 'com.google.gms:google-services:4.4.2'
+    }
+}
+
 allprojects {
     repositories {
         google()
@@ -5,14 +22,14 @@ allprojects {
     }
 }
 
+// Lokasi folder build untuk seluruh project
 rootProject.buildDir = "../build"
+
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
 }
-subprojects {
-    project.evaluationDependsOn(":app")
-}
 
+// Pastikan agar build dependensi selesai dengan benar
 tasks.register("clean", Delete) {
     delete rootProject.buildDir
 }
